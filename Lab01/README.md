@@ -30,7 +30,7 @@
 
 Part III (and appendices) will be conducted remotely connecting through Secure Shell (ssh) to the educational server lab000.cps.unizar.es.
 
-Conneting to all the educational servers (including lab000, hendrix, pilgor, etc.) can be done using your institutional credentials (e.g., username a123456 and your administrative password).
+Conneting to all the educational servers (including lab000, hendrix, pilgor, etc.) can be done using your institutional credentials (e.g., username a123456 and your administrative password). Depending on your previous experience on these servers, you may consider the following:
 
 - Those who have never used any of these servers before follow this [link](https://webdiis.unizar.es/cgi-bin/hendrix-pw) to create a new account.
   
@@ -38,9 +38,18 @@ Conneting to all the educational servers (including lab000, hendrix, pilgor, etc
 
 - Those who would like to change the type of Shell for the remote machines at the university (bash Shell is more friendly) use this [link](https://webdiis.unizar.es/cgi-bin/hendrix-chsh).
 
-Ssh remote command...
+The process to connect remotely to lab000 using ssh varies depending on the local Operating System (OS):
 
-There exist many text editors to code C/C++ programs such as vi or vim, which will allow us to write programs without the need for windows, or other windows-based editors like emacs or gedit. The decision of which text editor to use is entirely up to you.
+- UNIX/Linux: open a Shell terminal and run this command:
+
+```
+ssh -X a123456@lab000.cps.unizar.es
+```
+Where a123456 is your username and the option -X enables X11 forwarding (it allows graphical applications running on the remote machine to display their windows on your local machine).
+
+- Windows: there exist many applications to perform the ssh connection such as PuTTY+Xming, MobaXTerm, etc. For example, refer to this [document](http://webdiis.unizar.es/asignaturas/PROG1/doc/anuncios/programar_en_hendrix_desde_casa.pdf) to configure PuTTY+Xming.
+
+Finally, there are many text editors to code C/C++ programs such as vi or vim, which will allow us to write programs without the need for windows, or other windows-based editors like emacs or gedit (already installed in the server side). Choose your preferred option to navigate and edit code.
 
 ## Appendix A: Shell Basics
 
