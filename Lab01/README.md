@@ -72,14 +72,22 @@ $$
 - Clock cycles: the number of processor clock periods required to execute a workload:
 
 $$
-\text{Clock cycles} = \frac{Execution time}{\text{Cycle time}}
+\text{Clock cycles} = \frac{\text{Execution time}}{\text{Cycle time}}
 $$
 
-- Instructions count
+- Instructions count (IC): the total number of machine-level instructions executed by a program/workload.
 
-- Cycles Per Instruction (CPI)
+- Cycles Per Instruction (CPI): the average number of clock cycles required to execute one instruction:
 
-- Instructions Per Second (IPS)
+$$
+\text{CPI} = \frac{\text{Clock cycles}}{\text{IC}}
+$$
+
+- Instructions Per Second (IPS): the number of instructions executed per second:
+
+$$
+\text{IPS} = \frac{\text{IC}}{\text{Execution time}} = \frac{\text{Clock rate}}{\text{CPI}} 
+$$  
 
 - Data bandwidth (dBW)
 
