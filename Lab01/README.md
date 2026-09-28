@@ -51,6 +51,42 @@ Where a123456 is your username and the option -X enables X11 forwarding (it allo
 
 Finally, there are many text editors to code C/C++ programs such as vi or vim, which will allow us to write programs without the need for windows, or other windows-based editors like emacs or gedit (already installed in the server side). Choose your preferred option to navigate and edit code.
 
+## Metrics Definitions
+
+- Execution time: the time required by a computer to execute a given program or workload, from start to completion.
+
+- Performance: the amount of useful work completed per unit of time. For a fixed workload, it is commonly defined as:
+
+\[
+\text{Performance} = \frac{1}{\text{Execution time}}
+\]
+
+- Clock cycles
+
+- Clock rate (operating frequency)
+
+- Cycle time
+
+- Instructions count
+
+- Cycles Per Instruction (CPI)
+
+- Instructions Per Second (IPS)
+
+- Data bandwidth (dBW)
+
+- Instructions bandwidth (iBW)
+
+- Floating-Point Operations (FLOP)
+
+- FLOP per Second (FLOPS)
+
+- Energy Per Instruction (EPI)
+
+- Energy Per FLOP (EPF)
+
+- Performance to power ratio (Computing efficiency)
+
 ## Appendix A: Shell Basics
 
 A Shell or command line interpreter is a user interface that is navigated by typing commands at prompts (requests for input). Unlike a Graphical User Interface (GUI) OS, a Shell only uses a keyboard to navigate by entering commands and does not utilize a mouse for navigating. Although using a Shell requires to remember many different commands, it can be a valuable resource and should not be ignored. Using a Shell, you can perform almost all the same tasks that can be done with a GUI. However, many tasks can be performed quicker with powerful commands and can be easier to automate (through the execution of batch files or scripts) and do remotely.
