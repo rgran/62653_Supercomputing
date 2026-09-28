@@ -57,9 +57,9 @@ Finally, there are many text editors to code C/C++ programs such as vi or vim, w
 
 - Performance: the amount of useful work completed per unit of time. For a fixed workload, it is commonly defined as:
 
-\[
+$$
 \text{Performance} = \frac{1}{\text{Execution time}}
-\]
+$$
 
 - Clock cycles
 
