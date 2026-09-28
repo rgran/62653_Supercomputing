@@ -28,7 +28,19 @@
 
 ## Lab Environment
 
-Part III (and appendices) will be conducted remotely connecting through Secure Shell to the educational server lab000.cps.unizar.es.
+Part III (and appendices) will be conducted remotely connecting through Secure Shell (ssh) to the educational server lab000.cps.unizar.es.
+
+Conneting to all the educational servers (including lab000, hendrix, pilgor, etc.) can be done using your institutional credentials (e.g., username a123456 and your administrative password).
+
+- Those who have never used any of these servers before follow this [link](https://webdiis.unizar.es/cgi-bin/hendrix-pw) to create a new account.
+  
+- Those who have already an account but do not remember the password, or simply have never used these services, follow this [link](https://webdiis.unizar.es/cgi-bin/hendrix-newpw) to set up a new password.
+
+- Those who would like to change the type of Shell for the remote machines at the university (bash Shell is more friendly) use this [link](https://webdiis.unizar.es/cgi-bin/hendrix-chsh).
+
+Ssh remote command...
+
+There exist many text editors to code C/C++ programs such as vi or vim, which will allow us to write programs without the need for windows, or other windows-based editors like emacs or gedit. The decision of which text editor to use is entirely up to you.
 
 ## Appendix A: Shell Basics
 
