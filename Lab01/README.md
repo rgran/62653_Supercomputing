@@ -89,7 +89,11 @@ $$
 \text{IPS} = \frac{\text{IC}}{\text{Execution time}} = \frac{\text{Clock rate}}{\text{CPI}} 
 $$  
 
-- Data bandwidth (dBW)
+- Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s or bits/s. The precise definition depends on the system and workload. In this course, we will assume:
+
+ $$
+\text{dBW} = \frac{\text{OC} \times \frac{\text{bytes}}{\text{operand}}}{\text{IC}}
+$$ 
 
 - Instructions bandwidth (iBW)
 
