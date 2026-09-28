@@ -91,15 +91,25 @@ $$
 
 - Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s or bits/s. The precise definition depends on the system and workload. In this course, we will assume:
 
- $$
-\text{dBW} = \frac{\text{OC} \times \frac{\text{bytes}}{\text{operand}}}{\text{IC}}
+$$
+\text{dBW} = \frac{\text{OC} \times \frac{\text{bytes}}{\text{operand}}}{\text{Execution time}}
 $$ 
 
-- Instructions bandwidth (iBW)
+Where OC is the Operands Count measured as the number of memory (load and store) instructions of a program, assuming a given memory instruction transferes a single operand.
 
-- Floating-Point Operations (FLOP)
+- Instructions bandwidth (iBW): the rate at which instructions are transferred, typically measured in instructions/s.
 
-- FLOP per Second (FLOPS)
+$$
+\text{iBW} = \frac{\text{IC} \times \frac{\text{bytes}}{\text{instruction}}}{\text{Execution time}}
+$$   
+
+- Floating-Point Operations (FLOP): the number of individual floating-point arithmetic operations performed by a workload, e.g., additions and multiplications. FLOP is an operation count, not a rate.
+
+- FLOP per Second (FLOPS): the rate at which floating-point operations are performed:
+
+$$
+\text{FLOPS} = \frac{\text{FLOP}}{\text{Execution time}}
+$$
 
 - Energy Per Instruction (EPI)
 
