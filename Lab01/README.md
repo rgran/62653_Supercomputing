@@ -61,11 +61,19 @@ $$
 \text{Performance} = \frac{1}{\text{Execution time}}
 $$
 
-- Clock cycles
+- Clock rate (operating frequency): the number of clock cycles generated per second, measured in Hz. For example, 2.5 GHz = 2.5 × 10⁹ cycles/s.
 
-- Clock rate (operating frequency)
+- Cycle time: the duration of one clock cycle. It is the inverse of the clock rate:
 
-- Cycle time
+$$
+\text{Cycle time} = \frac{1}{\text{Clock rate}}
+$$
+
+- Clock cycles: the number of processor clock periods required to execute a workload:
+
+$$
+\text{Clock cycles} = \frac{Execution time}{\text{Cycle time}}
+$$
 
 - Instructions count
 
