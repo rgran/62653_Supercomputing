@@ -49,7 +49,7 @@ Where a123456 is your username and the option -X enables X11 forwarding (it allo
 
 - Windows: there exist many applications to perform the ssh connection such as PuTTY+Xming, MobaXTerm, etc. For example, refer to this [document](http://webdiis.unizar.es/asignaturas/PROG1/doc/anuncios/programar_en_hendrix_desde_casa.pdf) to configure PuTTY+Xming.
 
-Finally, there are many text editors to code C/C++ programs such as vi or vim, which will allow us to write programs without the need for windows, or other windows-based editors like emacs or gedit (already installed in the server side). Choose your preferred option to navigate and edit code.
+Finally, there are many text editors to code C/C++ programs such as vi or vim, which will allow us to write programs without the need for windows, or other windows-based editors like emacs or gedit (already installed in the server side). Choose your preferred option to navigate and edit code, but be aware that heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
 
 ## Metrics Definitions
 
