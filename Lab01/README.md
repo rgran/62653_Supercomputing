@@ -16,9 +16,9 @@
 
 - Part I: Metrics Definitions.
 
-- Part II: Written Exercise.
+- Part II: Written Exercise (includes deliverable).
 
-- Part III: Profiling Tools.
+- Part III: Profiling Tools (includes deliverable).
 
 - Appendix A: Shell Basics.
 
