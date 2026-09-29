@@ -14,17 +14,17 @@
 
 - [Lab Environment](#lab-environment).
 
-- Part I: Metric Definitions.
+- [Part I: Metric Definitions](#part-i:-metric-definitions).
 
 - Part II: Written Exercise (includes deliverable).
 
 - Part III: Profiling Tools (includes deliverable).
 
-- Appendix A: Shell Basics.
+- [Appendix A: Shell Basics](#appendix-a:-shell-basics).
 
-- Appendix B: Compiler Basics.
+- [Appendix B: Compiler Basics](#appendix-b:-compiler-basics).
 
-- Appendix C: Debugger Basics.
+- [Appendix C: Debugger Basics](#appendix-c:-debugger-basics).
 
 ## Lab Environment
 
