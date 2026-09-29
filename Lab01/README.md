@@ -40,16 +40,16 @@ Conneting to all the educational servers (including lab000, clinic, hendrix, pil
 
 The process to connect remotely to lab000 using ssh varies depending on the local Operating System (OS):
 
-- UNIX/Linux: open a Shell terminal and run this command:
+- UNIX/Linux/macOS: open a Shell terminal and run this command:
 
 ```
-ssh -X username@lab000.cps.unizar.es
+$> ssh -X username@lab000.cps.unizar.es
 ```
-The option -X enables X11 forwarding (it allows graphical applications running on the remote machine to display their windows on your local machine).
+Symbols `$>` refer to the prompt of the Shell and should not be included in the command-line order. The option `-X` enables X11 forwarding (it allows graphical applications running on the remote machine to display their windows on your local machine).
 
-- Windows: there exist many applications to perform the ssh connection such as PuTTY+Xming, MobaXTerm, etc. For example, refer to this [document](http://webdiis.unizar.es/asignaturas/PROG1/doc/anuncios/programar_en_hendrix_desde_casa.pdf) to configure PuTTY+Xming.
+- Windows: there exist many applications to perform the ssh connection such as PuTTY+Xming, MobaXTerm, WinSCP, Termius, etc. Some of them (e.g., MobaXTerm) include a GUI interface to copy files from the local machine to the server and vice versa. For example, refer to this [document](http://webdiis.unizar.es/asignaturas/PROG1/doc/anuncios/programar_en_hendrix_desde_casa.pdf) to configure PuTTY+Xming.
 
-Finally, there are many text editors to code C/C++ programs such as vi or vim, which will allow us to write programs without the need for windows, or other windows-based editors like emacs or gedit (already installed in the server side). Choose your preferred option to navigate and edit code, but be aware that heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
+Finally, there are many text editors to code C/C++ programs like vi or vim to write programs directly from the Shell without the need for windows, or other windows-based editors such as gedit (already installed in the server side). Choose your preferred option to navigate and edit code, but be aware that heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
 
 ## Metric Definitions
 
@@ -251,16 +251,19 @@ Autocomplete is a useful function to speed up the writing of a command line. Pre
 15. cd ../home/username/Desktop
 16. pwd
 ```
-**Important notice:** In the case of using the guest account instead of yours, commands #12 and #15 should be replaced by `cd /export/home/guest/Desktop` and `cd ../export/home/guest/Desktop`, respectively.
-
 Commands #12 and #15 refer to the same directory. The difference lies in that the former uses an absolute path from "/" to reach the directory destination (no matter what the current directory is), whereas the latter uses a relative path from the current directory (/proc) to reach the destination.
 
-**Download the lab1_materials.tar.gz file from either Moodle or the GitHub code tab and copy it to your $HOME directory. Then, unzip the file using the command:**
+Download the apd-materials.tar.gz file from the GitHub repository and transfer it to your home directory in the server. To do so, open a Shell in the local machine, change the directory to the location of the downloaded file, and type the following command:
 
 ```
-$> tar -xzvf lab1_materials.tar.gz
+$> scp apd-materials.zip username@lab000.cps.unizar.es:/home/username
 ```
-Note that symbols `$>` refer to the prompt of the Shell and should not be included in the command-line order.
+
+Then, on the server side, unzip the file using the command:
+
+```
+$> unzip apd-materials.zip
+```
 
 ### Directories (Create, Remove, Listing)
 
@@ -273,7 +276,7 @@ Note that symbols `$>` refer to the prompt of the Shell and should not be includ
 
 ```
 01. cd
-02. cd PACS
+02. cd SC
 02. mkdir trash
 03. mkdir dir1 dir2 dir3
 04. ls -l
@@ -299,22 +302,22 @@ Note that symbols `$>` refer to the prompt of the Shell and should not be includ
 
 ```
 01. cd
-02. cp /home/username/PACS/lab1/HelloWorld.cpp . (using guest account: cp /export/home/guest/PACS/lab1/HelloWorld.cpp .)
+02. cp /home/username/SC/lab01/HelloWorld.cpp .
 03. ls
-04. cp PACS/lab1/HelloWorld.cpp another.cpp
+04. cp SC/lab01/HelloWorld.cpp another.cpp
 05. ls
 06. mv another.cpp program.cpp
 07. ls
-08. mv program.cpp PACS/dir1
+08. mv program.cpp SC/dir1
 09. ls
-10. cd PACS/dir1
+10. cd SC/dir1
 11. ls
 12. rm program.cpp
 13. cd ..
 14. rmdir dir1
 15. ls
-16. cp lab1/HelloWorld.cpp dir2
-17. more lab1/HelloWorld.cpp
+16. cp lab01/HelloWorld.cpp dir2
+17. more lab01/HelloWorld.cpp
 18. more dir2/HelloWorld.cpp
 ```
 
@@ -324,7 +327,7 @@ Synchronous execution (step by step):
 
 - Shell waits for a command.
 - Shell launches the command to be executed.
-- **Shell waits for the execution to finish.**
+- Shell waits for the execution to finish.
 - Shell waits for a new command.
 
 #### Example
@@ -337,7 +340,7 @@ Asynchronous execution (step by step):
 
 - Shell waits for a command.
 - Shell launches the command to be executed.
-- **Shell does not wait for the execution to finish and immediately waits for a new command that can be launched while the previous one is still running.**
+- Shell does not wait for the execution to finish and immediately waits for a new command that can be launched while the previous one is still running.
 
 #### Example
 
@@ -364,7 +367,7 @@ The above behavior can be changed from the Shell with alternate forwarding optio
 #### Examples
 
 ```
-01. cd $HOME/PACS/lab1 
+01. cd $HOME/SC/lab01 
 02. ls –l > trash
 03. more trash
 04. cat < trash
@@ -419,7 +422,7 @@ The compiler is a tool capable of translating a program written in high level (C
 
 Once the program of the application that we want to implement has been coded in a high-level language, we save it in a text file, which we will call a source file. The generation of a binary (executable file) from a source file in a high-level language requires two compilation phases: translation (transfer) and linking (link). In the first phase, the compiler analyzes the source file in high-level language and generates an equivalent program in native machine language of the processor architecture in which we want to execute the program. As a result, the translation phase generates an object file. To finish building a binary file of the complete program, all those functions and procedures that are used but whose implementation can be found in other object files (system library or user library) are required. In the linking phase, the objects (or a reference to them) containing the external functions and procedures (system or user) used by the original source are added.
 
-The programs that we write in C++ language must be stored in a simple text file whose extension will be ".cpp". The default extension of the object files will be ".o". In the lab machines, we have the GNU g++ compiler for programs written in C++ language. This tool does the compilation phases, translation and linking, in a joint or separate manner.
+The programs that we write in C++ language must be stored in a simple text file whose extension will be ".cpp". The default extension of the object files will be ".o". In lab000, we have the GNU g++ compiler for programs written in C++ language. This tool does the compilation phases, translation and linking, in a joint or separate manner.
 
 To perform only the translation, use the `–c` flag:
 
@@ -428,7 +431,7 @@ $> g++ -Wall -c sourcecode.cpp
 ```
 The `-Wall` flag enables all the warning messages from the compiler during the compilation process. It is encouraged to include such a flag in all compilations. On a successful translation, a sourcecode.o file is produced as a result. This file refers to the object file of the source file sourcecode.cpp. Try such a command with the HelloWorld.cpp example.
 
-If we want to carry out the linking of several object files to generate the executable (named "binary_file" in the command below), we must use the `-o` flag. Only one of the object files must have the main symbol defined, which will be the entry point to the program. Those objects belonging to system libraries do not need to be specified as they are automatically added by the compiler:
+If we want to carry out the linking of several object files to generate the executable (named "binary_file" in the command below), we should use the `-o` flag. Only one of the object files should have the main symbol defined, which will be the entry point to the program. Those objects belonging to system libraries do not need to be specified as they are automatically added by the compiler:
 
 ```
 $> g++ -Wall object0.o object1.o object2.o ... objectN-1.o -o binary_file
@@ -456,7 +459,7 @@ Once the executable file of our program has been generated, we can launch it fro
 $> ./binary_file
 ```
 
-**Food for thought: why could be of interest to separate the translation and linking phases during compilation?**
+Food for thought: why could be of interest to separate the translation and linking phases during compilation?
 
 ## Appendix C: Debugger Basics
 
