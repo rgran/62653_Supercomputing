@@ -14,7 +14,7 @@
 
 - Lab Environment.
 
-- Part I: Metrics Definitions.
+- Part I: Metric Definitions.
 
 - Part II: Written Exercise (includes deliverable).
 
@@ -51,14 +51,14 @@ Where a123456 is your username and the option -X enables X11 forwarding (it allo
 
 Finally, there are many text editors to code C/C++ programs such as vi or vim, which will allow us to write programs without the need for windows, or other windows-based editors like emacs or gedit (already installed in the server side). Choose your preferred option to navigate and edit code, but be aware that heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
 
-## Metrics Definitions
+## Metric Definitions
 
-- Execution time: the time required by a computer to execute a given program or workload, from start to completion.
+- Execution time ($$T_{exec}$$: the time required by a computer to execute a given program or workload, from start to completion.
 
 - Performance: the amount of useful work completed per unit of time. For a fixed workload, it is commonly defined as:
 
 $$
-\text{Performance} = \frac{1}{\text{Execution time}}
+\text{Performance} = \frac{1}{T_{Exec}}
 $$
 
 - Clock rate (operating frequency): the number of clock cycles generated per second, measured in Hz. For example, 2.5 GHz = 2.5 × 10⁹ cycles/s.
@@ -72,7 +72,7 @@ $$
 - Clock cycles: the number of processor clock periods required to execute a workload:
 
 $$
-\text{Clock cycles} = \frac{\text{Execution time}}{\text{Cycle time}}
+\text{Clock cycles} = \frac{T_{Exec}}{\text{Cycle time}}
 $$
 
 - Instructions count (IC): the total number of machine-level instructions executed by a program/workload.
@@ -83,30 +83,30 @@ $$
 \text{CPI} = \frac{\text{Clock cycles}}{\text{IC}}
 $$
 
-- Instructions Per Second (IPS): the number of instructions executed per second:
+- Instructions Per Second (IPS): the number of instructions executed per second (instruction throughput):
 
 $$
-\text{IPS} = \frac{\text{IC}}{\text{Execution time}} = \frac{\text{Clock rate}}{\text{CPI}} 
+\text{IPS} = \frac{\text{IC}}{T_{Exec}} = \frac{\text{Clock rate}}{\text{CPI}} 
 $$  
 
 - Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s or bits/s. The precise definition depends on the system and workload. In this course, we will assume the following equation, where OC is the Operands Count measured as the number of memory (load and store) instructions of a program, considering that a given memory instruction transferres a single operand.
 
 $$
-\text{dBW} = \frac{\text{OC} \times \frac{\text{bytes}}{\text{operand}}}{\text{Execution time}}
+\text{dBW} = \frac{\text{OC} \times \frac{\text{bytes}}{\text{operand}}}{T_{Exec}}
 $$ 
 
-- Instructions bandwidth (iBW): the rate at which instructions are transferred, typically measured in instructions/s.
+- Instruction bandwidth (iBW): the rate at which instructions are transferred, typically measured in instructions/s.
 
 $$
-\text{iBW} = \frac{\text{IC} \times \frac{\text{bytes}}{\text{instruction}}}{\text{Execution time}}
+\text{iBW} = \frac{\text{IC} \times \frac{\text{bytes}}{\text{instruction}}}{T_{Exec}}
 $$   
 
 - Floating-Point Operations (FLOP): the number of individual floating-point arithmetic operations performed by a workload, e.g., additions and multiplications. FLOP is an operation count (quantity of operations), not a rate.
 
-- FLOP per Second (FLOPS): the rate at which floating-point operations are performed:
+- FLOP per Second (FLOPS): the rate at which floating-point operations are performed (floating-point throughput):
 
 $$
-\text{FLOPS} = \frac{\text{FLOP}}{\text{Execution time}}
+\text{FLOPS} = \frac{\text{FLOP}}{T_{Exec}}
 $$
 
 - Energy Per Instruction (EPI): the average energy consumed to execute one instruction, typically measured in Joules/instruction:
@@ -133,6 +133,15 @@ $$
 T_{Exec} = \frac{\text{Clock cycles}}{\text{Clock rate}}
 $$
 
+$$
+\text{Clock cycles} = \text{IC} \times \text{CPI}
+$$
+
+Therefore, the Iron Law expresses the execution time as:
+
+$$
+T_{exec} = \frac{\text{IC} \times \text{CPI}}{\text{Clock rate}}
+$$
 
 ## Appendix A: Shell Basics
 
