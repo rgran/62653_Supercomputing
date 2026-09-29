@@ -12,7 +12,7 @@
 
 ## Outline
 
-- Lab Environment.
+- [Lab Environment](#lab-environment).
 
 - Part I: Metric Definitions.
 
