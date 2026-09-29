@@ -503,26 +503,26 @@ The following example sets a breakpoint at the start of the main function:
 This example sets a breakpoint at a specific line (7):
 
 ```
-$ (gdb) b 7
+(gdb) b 7
 ```
 
 This example lists all of the breakpoints:
 
 ```
-$ (gdb) info b
+(gdb) info b
 ```
 
 This command deletes the breakpoint at line 7:
 
 ```
-$ (gdb) delete 2
+(gdb) delete 2
 ```
 
 You might need to execute a program slowly, moving from one line to the next one. There are two ways of making the program run step-by-step.
 The command next, or simply n, executes the current command, stops, and displays the next line for execution. However, if the line is a function call, the debugger will fully execute the function before the execution stops again:
 
 ```
-$ (gdb) n
+(gdb) n
 ```
 
 To execute line after line, even if a new function is invoked so that the sequential program flow breaks, the command step (s) can be used.
@@ -530,7 +530,7 @@ To execute line after line, even if a new function is invoked so that the sequen
 The command continue (c) resumes the execution until the end or the next breakpoint:
 
 ```
-$ (gdb) c
+(gdb) c
 ```
 
 The values of variables can be checked during specific moments of the execution. The print command can be used for this task. It is possible to print more complicated expressions, type casts, call functions, etc.
@@ -553,4 +553,6 @@ More commands and further details can be seen typing:
 
 The command quit (q) allows to exit from the gdb environment.
 
+##Final Notes
 
+Feedback to improve this lab or noticing typos is very welcome. Should you have any question about how submit or elaborate the deliverables, please contact me at: alvabre@unizar.es
