@@ -30,7 +30,7 @@
 
 ## Lab Environment
 
-Part III (and appendices) will be conducted remotely connecting through Secure Shell (ssh) to the educational server lab000.cps.unizar.es.
+Part III (and appendices) will be conducted remotely connecting through the Secure Shell protocol (ssh) to the educational server lab000.cps.unizar.es.
 
 Conneting to all the educational servers (including lab000, clinic, hendrix, pilgor, etc.) can be done using your institutional credentials (e.g., username a123456 and your administrative password). Depending on your previous experience on these servers, you may consider the following:
 
