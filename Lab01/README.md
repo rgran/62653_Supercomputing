@@ -173,18 +173,18 @@ A possible machine language compilation scheme is as follows:
 
 BB stands for Basic Block of instructions.
 
-| Column 1 | Column 2 | Column 3 |
+| Basic block | Instructions | Mem. instrs |
 |----------|----------|----------|
-| Row 1    |          |          |
-| Row 2    |          |          |
-| Row 3    |          |          |
-| Row 4    |          |          |
-| Row 5    |          |          |
-| Row 6    |          |          |
-| Row 7    |          |          |
-| Row 8    |          |          |
-| Row 9    |          |          |
-| Row 10   |          |          |
+| BB1    |          |          |
+| BB2    |          |          |
+| BB3    |          |          |
+| BB4    |          |          |
+| BB5    |          |          |
+| BB6    |          |          |
+| BB7    |          |          |
+| BB8    |          |          |
+| BB9    |          |          |
+| BB10   |          |          |
 
 Assume that machine language instructions are of a fixed size and occupy 4 bytes, whereas floating-point values are double-precision and occupy 8 bytes each.
 
