@@ -143,7 +143,36 @@ $$
 T_{exec} = \frac{\text{IC} \times \text{CPI}}{\text{Clock rate}}
 $$
 
-Finally, remark that the above rates are usually reported using decimal prefixes: Mega (M) = $$10^6$$, Giga (G) = $$10^9$$, or Tera (T) = $$10^{12}$$. 
+Finally, remark that the above rates are usually reported using decimal prefixes: Kilo (K) = $$10^3$$, Mega (M) = $$10^6$$, Giga (G) = $$10^9$$, or Tera (T) = $$10^{12}$$. Conversely, other metrics are usually reported using milli (m) = $$10^{-3}$$, micro (u) = $$10^{-6}$$, nano (n) = $$10^{-9}$$, or pico (p) = $$10^{-12}$$ prefixes.
+
+## Part II: Written Exercise
+
+**The following exercise should be delivered through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. Scanned handwritten files are accepted.**
+
+General Matrix Multiply (GEMM) is a common algorithm in linear algebra, machine learning, statistics, and many other domains. A possible high-level source code for GEMM is as follows:
+
+   ```cpp
+   double SUM = 0;
+   double A[400][400];
+   double B[400][400];
+   double C[400][400];
+
+   for (int i = 0; i < 400; i++) {
+      for (int j = 0; j < 400; j++) {
+      	 for (int k = 0; k < 400; k++) {
+         	SUM=SUM+B[i][k] * C[k][j];
+		 }
+         A[i][j] = SUM;
+		 SUM = 0;
+      }
+   }
+   ```
+
+A possible machine language compilation scheme is as follows:
+
+
+
+Assume that machine language instructions are of a fixed size and occupy 4 bytes, whereas floating-point values are double-precision and occupy 8 bytes each.
 
 ## Appendix A: Shell Basics
 
