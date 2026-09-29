@@ -16,7 +16,7 @@
 
 - [Part I: Metric Definitions](#part-i-metric-definitions).
 
-- Part II: Written Exercise (includes deliverable).
+- [Part II: Written Exercise](#part-ii-written-exercise) (includes deliverable).
 
 - Part III: Profiling Tools (includes deliverable).
 
@@ -160,9 +160,9 @@ General Matrix Multiply (GEMM) is a common algorithm in linear algebra, machine 
    for (int i = 0; i < 400; i++) {
       for (int j = 0; j < 400; j++) {
       	 for (int k = 0; k < 400; k++) {
-         	SUM=SUM+B[i][k] * C[k][j];
+         	SUM = SUM + B[i][k] * C[k][j];
 		 }
-         A[i][j] = SUM;
+   		 A[i][j] = SUM;
 		 SUM = 0;
       }
    }
