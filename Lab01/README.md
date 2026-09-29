@@ -162,7 +162,7 @@ General Matrix Multiply (GEMM) is a common algorithm in linear algebra, machine 
       	 for (int k = 0; k < 400; k++) {
          	SUM = SUM + B[i][k] * C[k][j];
 		 }
-   		 A[i][j] = SUM;
+         A[i][j] = SUM;
 		 SUM = 0;
       }
    }
