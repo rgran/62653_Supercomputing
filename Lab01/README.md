@@ -196,7 +196,7 @@ c)	IPS.
 
 d)	iBW (iBytes/s).
 
-e)	dBW.
+e)	dBW (dBytes/s).
 
 f)	EPF.
 
