@@ -171,6 +171,20 @@ General Matrix Multiply (GEMM) is a common algorithm in linear algebra, machine 
 A possible machine language compilation scheme is as follows:
 
 
+BB stands for Basic Block of instructions.
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Row 1    |          |          |
+| Row 2    |          |          |
+| Row 3    |          |          |
+| Row 4    |          |          |
+| Row 5    |          |          |
+| Row 6    |          |          |
+| Row 7    |          |          |
+| Row 8    |          |          |
+| Row 9    |          |          |
+| Row 10   |          |          |
 
 Assume that machine language instructions are of a fixed size and occupy 4 bytes, whereas floating-point values are double-precision and occupy 8 bytes each.
 
