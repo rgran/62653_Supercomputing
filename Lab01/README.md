@@ -89,13 +89,13 @@ $$
 \text{IPS} = \frac{\text{IC}}{T_{Exec}} = \frac{\text{Clock rate}}{\text{CPI}} 
 $$  
 
-- Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s or bits/s. The precise definition depends on the system and workload. In this course, we will assume the following equation, where OC is the Operand Count measured as the number of memory (load and store) instructions of a program, considering that a given memory instruction transferres a single operand.
+- Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s. The precise definition depends on the system and workload. In this course, we will assume the following equation, where OC is the Operand Count measured as the number of memory (load and store) instructions of a program, considering that a given memory instruction transferres a single operand.
 
 $$
 \text{dBW} = \frac{\text{OC} \times \frac{\text{bytes}}{\text{operand}}}{T_{Exec}}
 $$ 
 
-- Instruction bandwidth (iBW): the rate at which instructions are transferred, typically measured in instructions/s.
+- Instruction bandwidth (iBW): the rate at which instructions are transferred, typically measured in bytes/s.
 
 $$
 \text{iBW} = \frac{\text{IC} \times \frac{\text{bytes}}{\text{instruction}}}{T_{Exec}}
@@ -186,7 +186,20 @@ BB stands for Basic Block of instructions. The following table summarizes the to
 | BB9    |          |          |
 | BB10   |          |          |
 
-Assume that machine language instructions are of a fixed size and occupy 4 bytes, whereas floating-point values are double-precision and occupy 8 bytes each.
+Assume that machine language instructions are of a fixed size and occupy 4 bytes, whereas floating-point values are double-precision and occupy 8 bytes each. When executing this program, a compute speed of 4 GFLOPS and a power of 100 W are measured. The following metrics are requested, choosing the appropriate units so that the number of digits is small.
+
+a)	FLOP.
+
+b)	Execution time.
+
+c)	IPS.
+
+d)	iBW (iBytes/s).
+
+e)	dBW.
+
+f)	EPF.
+
 
 ## Appendix A: Shell Basics
 
