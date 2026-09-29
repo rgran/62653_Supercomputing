@@ -24,7 +24,7 @@
 
 - [Appendix B: Compiler Basics](#appendix-b-compiler-basics)
 
-- [Appendix C: Debugger Basics](#appendix-c-debugger-basics).
+- [Appendix C: Debugger Basics](#appendix-c-debugger-basics)
 
 - [Final Notes](#final-notes)
 
