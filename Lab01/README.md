@@ -255,7 +255,7 @@ Autocomplete is a useful function to speed up the writing of a command line. Pre
 ```
 Commands #12 and #15 refer to the same directory. The difference lies in that the former uses an absolute path from "/" to reach the directory destination (no matter what the current directory is), whereas the latter uses a relative path from the current directory (/proc) to reach the destination.
 
-Download the apd-materials.tar.gz file from the GitHub repository and transfer it to your home directory in the server. To do so, open a Shell in the local machine, change the directory to the location of the downloaded file, and type the following command:
+Download the apd-materials.tar.gz file from the src folder in the GitHub repository and transfer it to your home directory in the server. To do so, open a Shell in the local machine, change the directory to the location of the downloaded file, and type the following command:
 
 ```
 $> scp apd-materials.zip username@lab000.cps.unizar.es:/home/username
