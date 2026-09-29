@@ -174,7 +174,7 @@ A possible machine language compilation scheme is as follows:
 BB stands for Basic Block of instructions. The following table summarizes the total number of instructions and the subset of memory instructions for every basic block:
 
 | Basic block | Instructions | Mem. instrs |
-|----------|----------|----------|
+|:----------:|:----------:|:----------:|
 | BB1    |  1        | 0         |
 | BB2    |  1        | 0         |
 | BB3    |          |          |
