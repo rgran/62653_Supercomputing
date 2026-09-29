@@ -553,7 +553,7 @@ More commands and further details can be seen typing:
 (gdb) help
 ```	
 
-The command quit (q) allows to exit from the gdb environment.
+Type the command quit (q) to exit from the gdb environment.
 
 ## Final Notes
 
