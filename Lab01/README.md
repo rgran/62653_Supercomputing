@@ -18,7 +18,7 @@
 
 - [Part II: Written Exercise](#part-ii-written-exercise) (includes deliverable).
 
-- Part III: Profiling Tools (includes deliverable).
+- [Part III: Profiling Tools](#part-iii-profiling-tools) (includes deliverable).
 
 - [Appendix A: Shell Basics](#appendix-a-shell-basics).
 
@@ -200,6 +200,9 @@ e)	dBW.
 
 f)	EPF.
 
+## Part III: Profiling Tools
+
+**The following exercise should be delivered through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. Scanned handwritten files are accepted.**
 
 ## Appendix A: Shell Basics
 
