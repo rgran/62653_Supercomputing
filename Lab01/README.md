@@ -26,6 +26,8 @@
 
 - [Appendix C: Debugger Basics](#appendix-c-debugger-basics).
 
+- [Final Notes](#final-notes).
+
 ## Lab Environment
 
 Part III (and appendices) will be conducted remotely connecting through Secure Shell (ssh) to the educational server lab000.cps.unizar.es.
@@ -553,6 +555,6 @@ More commands and further details can be seen typing:
 
 The command quit (q) allows to exit from the gdb environment.
 
-##Final Notes
+## Final Notes
 
-Feedback to improve this lab or noticing typos is very welcome. Should you have any question about how submit or elaborate the deliverables, please contact me at: alvabre@unizar.es
+Feedback to improve this lab or noticing typos is very welcome. Should you have any question about how to submit or elaborate the deliverables, please contact me at: alvabre@unizar.es
