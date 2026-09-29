@@ -170,6 +170,8 @@ General Matrix Multiply (GEMM) is a common algorithm in linear algebra, machine 
 
 A possible machine language compilation scheme is as follows:
 
+![Machine level code](./figs/gemm_comp_scheme.png){ height=250 }
+
 
 BB stands for Basic Block of instructions. The following table summarizes the total number of instructions and the subset of memory instructions for every basic block:
 
