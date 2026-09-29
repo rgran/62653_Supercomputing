@@ -12,21 +12,21 @@
 
 ## Outline
 
-- [Lab Environment](#lab-environment).
+- [Lab Environment](#lab-environment)
 
-- [Part I: Metric Definitions](#part-i-metric-definitions).
+- [Part I: Metric Definitions](#part-i-metric-definitions)
 
-- [Part II: Written Exercise](#part-ii-written-exercise) (includes deliverable).
+- [Part II: Written Exercise](#part-ii-written-exercise) (includes deliverable)
 
-- [Part III: Profiling Tools](#part-iii-profiling-tools) (includes deliverable).
+- [Part III: Profiling Tools](#part-iii-profiling-tools) (includes deliverable)
 
-- [Appendix A: Shell Basics](#appendix-a-shell-basics).
+- [Appendix A: Shell Basics](#appendix-a-shell-basics)
 
-- [Appendix B: Compiler Basics](#appendix-b-compiler-basics).
+- [Appendix B: Compiler Basics](#appendix-b-compiler-basics)
 
 - [Appendix C: Debugger Basics](#appendix-c-debugger-basics).
 
-- [Final Notes](#final-notes).
+- [Final Notes](#final-notes)
 
 ## Lab Environment
 
