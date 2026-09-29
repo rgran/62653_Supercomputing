@@ -177,14 +177,14 @@ BB stands for Basic Block of instructions. The following table summarizes the to
 |:----------:|:----------:|:----------:|
 | BB1    |  1        | 0         |
 | BB2    |  1        | 0         |
-| BB3    |          |          |
-| BB4    |          |          |
-| BB5    |          |          |
-| BB6    |          |          |
-| BB7    |          |          |
-| BB8    |          |          |
-| BB9    |          |          |
-| BB10   |          |          |
+| BB3    |  1        | 0         |
+| BB4    |  1        | 0         |
+| BB5    |  1        | 0         |
+| BB6    |  1        | 0         |
+| BB7    |  1        | 0         |
+| BB8    |  7        | 3         |
+| BB9    |  4        | 1         |
+| BB10   |  2        | 0         |
 
 Assume that machine language instructions are of a fixed size and occupy 4 bytes, whereas floating-point values are double-precision and occupy 8 bytes each. When executing this program, a compute speed of 4 GFLOPS and a power of 100 W are measured. The following metrics are requested, choosing the appropriate units so that the number of digits is small.
 
