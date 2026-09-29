@@ -89,13 +89,11 @@ $$
 \text{IPS} = \frac{\text{IC}}{\text{Execution time}} = \frac{\text{Clock rate}}{\text{CPI}} 
 $$  
 
-- Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s or bits/s. The precise definition depends on the system and workload. In this course, we will assume:
+- Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s or bits/s. The precise definition depends on the system and workload. In this course, we will assume the following equation, where OC is the Operands Count measured as the number of memory (load and store) instructions of a program, considering that a given memory instruction transferres a single operand.
 
 $$
 \text{dBW} = \frac{\text{OC} \times \frac{\text{bytes}}{\text{operand}}}{\text{Execution time}}
 $$ 
-
-Where OC is the Operands Count measured as the number of memory (load and store) instructions of a program, assuming a given memory instruction transferes a single operand.
 
 - Instructions bandwidth (iBW): the rate at which instructions are transferred, typically measured in instructions/s.
 
@@ -103,7 +101,7 @@ $$
 \text{iBW} = \frac{\text{IC} \times \frac{\text{bytes}}{\text{instruction}}}{\text{Execution time}}
 $$   
 
-- Floating-Point Operations (FLOP): the number of individual floating-point arithmetic operations performed by a workload, e.g., additions and multiplications. FLOP is an operation count, not a rate.
+- Floating-Point Operations (FLOP): the number of individual floating-point arithmetic operations performed by a workload, e.g., additions and multiplications. FLOP is an operation count (quantity of operations), not a rate.
 
 - FLOP per Second (FLOPS): the rate at which floating-point operations are performed:
 
@@ -111,11 +109,30 @@ $$
 \text{FLOPS} = \frac{\text{FLOP}}{\text{Execution time}}
 $$
 
-- Energy Per Instruction (EPI)
+- Energy Per Instruction (EPI): the average energy consumed to execute one instruction, typically measured in Joules/instruction:
 
-- Energy Per FLOP (EPF)
+$$
+\text{EPI} = \frac{\text{Energy}}{\text{IC}}
+$$
 
-- Performance to power ratio (Computing efficiency)
+- Energy Per FLOP (EPF): the average energy consumed per floating-point operation, typically measured in Joules/FLOP:
+
+$$
+\text{EPF} = \frac{\text{Energy}}{\text{FLOP}}
+$$
+
+- Performance to power ratio (Computing efficiency): the amount of computational performance obtained per unit of power, commonly expressed as FLOPS/W. Higher values indicate more computation for the same power consumption:
+
+$$
+\text{Computing efficiency} = \frac{\text{FLOPS}}{\text{Power}}
+$$
+
+A useful way to see how the metrics connect is:
+
+$$
+T_{Exec} = \frac{\text{Clock cycles}}{\text{Clock rate}}
+$$
+
 
 ## Appendix A: Shell Basics
 
