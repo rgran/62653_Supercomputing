@@ -143,7 +143,7 @@ $$
 T_{exec} = \frac{\text{IC} \times \text{CPI}}{\text{Clock rate}}
 $$
 
-Finally, remark that the above rates are usually reported using decimal prefixes: Mega (M) = \(10^6\), Giga (G) = \(10^9\), or Tera (T) = \(10^{12}\). 
+Finally, remark that the above rates are usually reported using decimal prefixes: Mega (M) = $$10^6$$, Giga (G) = $$10^9$$, or Tera (T) = $$10^{12}$$. 
 
 ## Appendix A: Shell Basics
 
