@@ -53,7 +53,7 @@ Finally, there are many text editors to code C/C++ programs such as vi or vim, w
 
 ## Metric Definitions
 
-- Execution time ($$T_{exec}$$: the time required by a computer to execute a given program or workload, from start to completion.
+- Execution time ($$T_{exec}$$): the time required by a computer to execute a given program or workload, from start to completion.
 
 - Performance: the amount of useful work completed per unit of time. For a fixed workload, it is commonly defined as:
 
@@ -89,7 +89,7 @@ $$
 \text{IPS} = \frac{\text{IC}}{T_{Exec}} = \frac{\text{Clock rate}}{\text{CPI}} 
 $$  
 
-- Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s or bits/s. The precise definition depends on the system and workload. In this course, we will assume the following equation, where OC is the Operands Count measured as the number of memory (load and store) instructions of a program, considering that a given memory instruction transferres a single operand.
+- Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s or bits/s. The precise definition depends on the system and workload. In this course, we will assume the following equation, where OC is the Operand Count measured as the number of memory (load and store) instructions of a program, considering that a given memory instruction transferres a single operand.
 
 $$
 \text{dBW} = \frac{\text{OC} \times \frac{\text{bytes}}{\text{operand}}}{T_{Exec}}
@@ -142,6 +142,8 @@ Therefore, the Iron Law expresses the execution time as:
 $$
 T_{exec} = \frac{\text{IC} \times \text{CPI}}{\text{Clock rate}}
 $$
+
+Finally, remark that the above rates are usually reported using decimal prefixes: Mega (M) = \(10^6\), Giga (G) = \(10^9\), or Tera (T) = \(10^{12}\). 
 
 ## Appendix A: Shell Basics
 
