@@ -153,6 +153,8 @@ $$
 Sup = \frac{T_{exec,reference}}{T_{exec,optimized}}
 $$
 
+For example, Sup = 2 means the optimized version is 2× faster (takes half the time), Sup = 1 means no improvement, and Sup < 1 means the optimized version is slower than the reference.
+
 ## Part II: Written Exercise
 
 **The following exercise should be delivered through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. Scanned handwritten files are accepted.**
