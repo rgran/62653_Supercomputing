@@ -145,7 +145,13 @@ $$
 T_{exec} = \frac{\text{IC} \times \text{CPI}}{\text{Clock rate}}
 $$
 
-Finally, remark that the above rates are usually reported using decimal prefixes: Kilo (K) = $$10^3$$, Mega (M) = $$10^6$$, Giga (G) = $$10^9$$, or Tera (T) = $$10^{12}$$. Conversely, other metrics are usually reported using milli (m) = $$10^{-3}$$, micro (u) = $$10^{-6}$$, nano (n) = $$10^{-9}$$, or pico (p) = $$10^{-12}$$ prefixes.
+The above rates are usually reported using decimal prefixes: Kilo (K) = $$10^3$$, Mega (M) = $$10^6$$, Giga (G) = $$10^9$$, or Tera (T) = $$10^{12}$$. Conversely, other metrics are usually reported using milli (m) = $$10^{-3}$$, micro (u) = $$10^{-6}$$, nano (n) = $$10^{-9}$$, or pico (p) = $$10^{-12}$$ prefixes.
+
+Finally, the aforementioned metrics, specifically those reporting time (either in seconds or cycles), can be used to calculate the speedup (Sup). The speedup measures how much faster one implementation or system executes a workload compared with a reference implementation:
+
+$$
+Sup = \frac{T_{exec}_{reference}}{T_{exec}_{optimized}}
+$$
 
 ## Part II: Written Exercise
 
