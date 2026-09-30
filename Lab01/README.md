@@ -218,6 +218,26 @@ f)	EPF.
 
 ## Part III: Profiling Tools
 
+Let's take two different versions of the GEMM algorithm to learn how to use profiling tools. The src folder of the repository contains the files gemm-naive.cpp and gemm-eigen.cpp. The former code implements a naive three-nested loop (very similar to the code snippet in Part II), whereas the latter code employs the C++ Eigen math library. Inspect the source codes and notice that both versions take as input the problem size (matrix dimensions) from the command line ([see Appendix A](#appendix-a-shell-basics)).
+
+Transfer these two files and the Eigen 3.4.0 package version to the server lab000 using the scp command under Linux (again [see Appendix A](#appendix-a-shell-basics)) or a GUI interface under Windows. Then, unzip the Eigen library and be patient (it may take some time):
+
+```
+$> tar -xzvf eigen-3.4.0.tar.gz
+```
+
+This library is a headers-only Eigen implementation, meaning that the library compiles with the application, so just refer to the directory where the Eigen library is to be found when compiling gemm-eigen.cpp with the flag -I:
+
+```
+$> g++ -O2 -Wall -I <path-to>/eigen-3.4.0/ gemm-eigen.cpp -o gemm-eigen
+```
+
+Compile as well the naive version using the flags -O2 and -Wall, but not the option -I as this version does not employ the math library.
+
+....
+
+....
+
 **The following exercise should be delivered through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. Scanned handwritten files are accepted.**
 
 ## Appendix A: Shell Basics
