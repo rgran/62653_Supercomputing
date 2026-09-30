@@ -154,14 +154,16 @@ Finally, remark that the above rates are usually reported using decimal prefixes
 General Matrix Multiply (GEMM) is a common algorithm in linear algebra, machine learning, statistics, and many other domains. A possible high-level source code for GEMM is as follows:
 
    ```cpp
-   double SUM = 0;
-   double A[400][400];
-   double B[400][400];
-   double C[400][400];
+   #define N 400
 
-   for (int i = 0; i < 400; i++) {
-      for (int j = 0; j < 400; j++) {
-      	 for (int k = 0; k < 400; k++) {
+   double SUM = 0;
+   double A[N][N];
+   double B[N][N];
+   double C[N][N];
+
+   for (int i = 0; i < N; i++) {
+      for (int j = 0; j < N; j++) {
+      	 for (int k = 0; k < N; k++) {
          	SUM = SUM + B[i][k] * C[k][j];
 		 }
         A[i][j] = SUM;
