@@ -150,7 +150,7 @@ The above rates are usually reported using decimal prefixes: Kilo (K) = $$10^3$$
 Finally, the aforementioned metrics, specifically those reporting time (either in seconds or cycles), can be used to calculate the speedup (Sup). The speedup measures how much faster one implementation or system executes a workload compared with a reference implementation:
 
 $$
-Sup = \frac{T_{exec}_{reference}}{T_{exec}_{optimized}}
+Sup = \frac{T_{exec,reference}}{T_{exec,optimized}}
 $$
 
 ## Part II: Written Exercise
