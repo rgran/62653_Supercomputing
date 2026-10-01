@@ -236,16 +236,67 @@ Compile as well the naive version using the flags -O2 and -Wall, but not the opt
 
 Try some runs for both GEMM versions. Remember that both programs expect the problem size (N) as an input parameter in the command line.
 
-The next subsections introduce different event-based profiling tools to perform an advanced characterizartion of applications.
+The next subsections introduce different profiling tools to perform an advanced characterization of applications: Perf, Gprof, and Valgrind.
 
 ### Perf
 
-....
+Perf is an event-based, command-line profiling tool for Linux that uses hardware performance event counters to measure a number of specific kinds of events that occur during the execution of a program. Examples of events include processor clock cycles, retired instructions, data cache hits, or data cache misses. The specific events to be measured are determined by the profile configuration that is used to set up data collection. Particularly, Perf provides access to the Performance Monitoring Unit (PMU) in a CPU, and thus allows the user to have a close look at the behavior of the hardware and its associated events. The available events are processor-implementation specific. In addition, `perf` can also monitor software events through pure-kernel counters, such as context switches or minor faults, and create reports out of the data that are collected.
 
-....
+To obtain a full list of the supported events, type:
+
+```
+$> perf list
+```
+
+Press ENTER to scroll down in the list of events and `q` to exit.
+
+To filter the list just showing a list of events available in a specific category, use `perf list` followed by the category name: `hw`, `sw`, `cache`, `pmu`, etcetera. For instance, `perf list sw` displays the list of software pre-defined events in Linux.
+
+With the `stat` option and no particular events specified in the command line, `perf` runs a command and collects by default some common performance statistics during the execution of such a command, which will be enough for our purpose. For example:
+
+```
+$> perf stat ls
+```
+
+The displayed stats indicate the following:
+
+* `task-clock (msec)`: the amount of time that the command execution spent in the CPU (in milliseconds).
+* `context-switches`: this stat (also known as process switches) indicates the number of times the CPUs were switched from one process (or thread) to another.
+* `cpu-migrations`: in a multicore machine, CPU or process migrations happen as a standard part of the process scheduling, and it is relatively easy to migrate a process within a given machine, since most resources do not need to be changed but only the execution context (primarily the program counter and the registers).
+* `page-faults`: refers to the number of page fault exceptions raised by the computer hardware when the running program accesses a memory page that is not currently mapped in the physical memory by the memory management unit.
+* `cycles`: the total number of CPU clock cycles that are consumed.
+* `stalled-cycles-frontend`: measures the number of CPU clock cycles during which the instruction-fetch/decode front end is stalled, preventing the back end from receiving enough instructions to execute.
+* `instructions`: the total number of CPU instructions that are executed.
+* `branches`: the total number of instruction branches encountered while executing the program. This is the CPU-level representation of decision points and loops in the code. The more branches, the lower the performance.
+* `branch-misses`: to compensate for the above performance penalties, modern CPUs attempt to predict the flow the code will take. This stat indicates the number of branch misses and the percentage with respect to the overall number of branches.
+* `seconds time elapsed`: refers to the overall execution time of the command. Dividing the first stat with the current stat gives the percentage of CPU utilization.
+
+Note that other metrics like the operating frequency (in GHz) or the instructions per cycle (IPC) can be derived from the previous stats.
+
+The `-e` option can be used to collect just specific events, which are separated with commas:
+
+```
+$labmachine> perf stat -e cycles,instructions ls
+```
+
+The above example just shows the cycles and instructions for the `ls` run.
+
+It is also possible to use `perf stat` to run the same test workload multiple times and get the standard deviation from the mean. To do so, use the `-r` option as follows:
+
+```
+$labmachine> perf stat -r 5 ls
+```
+
+In the previous example, `ls` is run 5 times and the mean count for each event, along with a ratio of std-dev/mean is printed.
 
 **Exercise 1: Plot the speedup (Sup) of the gemm-eigen program vs the gemm-naive version as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100. Use perf to obtain the execution times. Take as execution time the average time for 5 runs (last row of the perf output). Discuss briefly the obtained results.**
 
+### Gprof
+....
+
+....
+
+### Valgrind
 ....
 
 ....
