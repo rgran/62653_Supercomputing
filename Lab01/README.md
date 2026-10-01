@@ -153,7 +153,7 @@ $$
 Sup = \frac{T_{exec,reference}}{T_{exec,optimized}}
 $$
 
-For example, Sup = 2 means the optimized version is 2× faster (takes half the time), Sup = 1 means no improvement, and Sup < 1 means the optimized version is slower than the reference.
+For example, Sup = 2 means the optimized version is 2× faster (takes half the time), Sup = 1 means no improvement, and Sup < 1 means the optimized version is slower than the reference (this is actually a slowdown).
 
 ## Part II: Written Exercise
 
@@ -218,9 +218,9 @@ f)	EPF.
 
 ## Part III: Profiling Tools
 
-Let's take two different versions of the GEMM algorithm to learn how to use profiling tools. The src folder of the repository contains the files gemm-naive.cpp and gemm-eigen.cpp. The former code implements a naive three-nested loop (very similar to the code snippet in Part II), whereas the latter code employs the C++ Eigen math library. Inspect the source codes and notice that both versions take as input the problem size (matrix dimensions) from the command line ([see Appendix A](#appendix-a-shell-basics)).
+Let's take two different versions of the GEMM algorithm to learn how to use profiling tools. The src folder of the repository contains the files gemm-naive.cpp and gemm-eigen.cpp. The former code implements a naive three-nested loop (very similar to the code snippet in Part II), whereas the latter code employs the [C++ Eigen math library](https://libeigen.gitlab.io/eigen/docs-nightly/). Analyze the source codes and notice not only the difference in the programming effort but also the fact that both versions take as input the problem size (matrix dimensions) from the command line (see [Appendix A](#appendix-a-shell-basics)).
 
-Transfer these two files and the Eigen 3.4.0 package version to the server lab000 using the scp command under Linux (again [see Appendix A](#appendix-a-shell-basics)) or a GUI interface under Windows. Then, unzip the Eigen library and be patient (it may take some time):
+Transfer these two files and the Eigen 3.4.0 package version to the server lab000 using the scp command under Linux (again see [Appendix A](#appendix-a-shell-basics)) or a GUI interface under Windows. Then, unzip the Eigen library and be patient (it may take some time):
 
 ```
 $> tar -xzvf eigen-3.4.0.tar.gz
@@ -234,11 +234,23 @@ $> g++ -O2 -Wall -I <path-to>/eigen-3.4.0/ gemm-eigen.cpp -o gemm-eigen
 
 Compile as well the naive version using the flags -O2 and -Wall, but not the option -I as this version does not employ the math library.
 
-....
+Try some runs for both GEMM versions. Remember that both programs expect the problem size (N) as an input parameter in the command line.
+
+The next subsections introduce different event-based profiling tools to perform an advanced characterizartion of applications.
+
+### Perf
 
 ....
 
-**The following exercise should be delivered through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. Scanned handwritten files are accepted.**
+....
+
+**Exercise 1: Plot the speedup (Sup) of the gemm-eigen program vs the gemm-naive version as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100. Use perf to obtain the execution times. Take as execution time the average time for 5 runs (last row of the perf output). Discuss briefly the obtained results.**
+
+....
+
+....
+
+**All the obtained results and discussions across exercises 1 to X should be delivered as a X-page single-column report through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format.**
 
 ## Appendix A: Shell Basics
 
