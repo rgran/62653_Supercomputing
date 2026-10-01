@@ -5,14 +5,14 @@
 using namespace Eigen;
 using namespace std;
 
-void allocate_matrices(int N, MatrixXd &a, MatrixXd &b, MatrixXd &c)
+void alloc_mats(int N, MatrixXd &a, MatrixXd &b, MatrixXd &c)
 {
     a.resize(N, N);
     b.resize(N, N);
     c.resize(N, N);
 }
 
-void initialize_matrices(MatrixXd &a, MatrixXd &b, MatrixXd &c)
+void init_mats(MatrixXd &a, MatrixXd &b, MatrixXd &c)
 {
     a = MatrixXd::Random(a.rows(), a.cols());
     b = MatrixXd::Random(b.rows(), b.cols());
@@ -30,8 +30,8 @@ int main(int argc, char *argv[])
 
     MatrixXd a, b, c;
 
-    allocate_matrices(N, a, b, c);
-    initialize_matrices(a, b, c);
+    alloc_mats(N, a, b, c);
+    init_mats(a, b, c);
     gemm(a, b, c);
 
     return 0;
