@@ -276,7 +276,7 @@ Note that other metrics like the operating frequency (in GHz) or the instruction
 The `-e` option can be used to collect just specific events, which are separated with commas:
 
 ```
-$labmachine> perf stat -e cycles,instructions ls
+$> perf stat -e cycles,instructions ls
 ```
 
 The above example just shows the cycles and instructions for the `ls` run.
@@ -284,12 +284,12 @@ The above example just shows the cycles and instructions for the `ls` run.
 It is also possible to use `perf stat` to run the same test workload multiple times and get the standard deviation from the mean. To do so, use the `-r` option as follows:
 
 ```
-$labmachine> perf stat -r 5 ls
+$> perf stat -r 5 ls
 ```
 
 In the previous example, `ls` is run 5 times and the mean count for each event, along with a ratio of std-dev/mean is printed.
 
-**Exercise 1: Plot the speedup (Sup) of the gemm-eigen program vs the gemm-naive version as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100. Use perf to obtain the execution times. Take as execution time the average time for 5 runs (last row of the perf output). Discuss briefly the obtained results.**
+**Exercise 1: Plot the speedup (Sup) of the gemm-eigen version vs. the gemm-naive version as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100. Use perf to obtain the execution times. Take as execution time the average time for 5 runs (last row of the perf output). Discuss briefly the obtained results.**
 
 ### Gprof
 ....
