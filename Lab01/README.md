@@ -236,7 +236,7 @@ Compile as well the naive version using the flags -O2 and -Wall, but not the opt
 
 Try some runs for both GEMM versions. Remember that both programs expect the problem size (N) as an input parameter in the command line.
 
-The next subsections introduce different profiling tools to perform an advanced characterization of applications: Perf, Gprof, and Valgrind.
+The next subsections introduce different profiling tools to perform an advanced characterization of applications: Gprof, Perf, and Valgrind.
 
 ### Gprof: Where does my program spend its execution time?
 ....
