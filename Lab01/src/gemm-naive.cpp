@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void alloc_matrices(int N, double **&a, double **&b, double **&c)
+void alloc_mats(int N, double **&a, double **&b, double **&c)
 {
     a = new double*[N];
     b = new double*[N];
@@ -16,7 +16,7 @@ void alloc_matrices(int N, double **&a, double **&b, double **&c)
     }
 }
 
-void init_matrices(int N, double **a, double **b, double **c)
+void init_mats(int N, double **a, double **b, double **c)
 {
     for (int i = 0; i < N; ++i)
         for (int j = 0; j < N; ++j) {
@@ -40,8 +40,8 @@ int main(int argc, char *argv[])
 
     double **a, **b, **c;
 
-    alloc_matrices(N, a, b, c);
-    init_matrices(N, a, b, c);
+    alloc_mats(N, a, b, c);
+    init_mats(N, a, b, c);
     gemm(N, a, b, c);
 
     return 0;
