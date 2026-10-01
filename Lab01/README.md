@@ -238,7 +238,13 @@ Try some runs for both GEMM versions. Remember that both programs expect the pro
 
 The next subsections introduce different profiling tools to perform an advanced characterization of applications: Perf, Gprof, and Valgrind.
 
-### Perf
+### Gprof: Where does my program spend its execution time?
+....
+
+....
+
+
+### Perf: How efficiently is the CPU executing it?
 
 Perf is an event-based, command-line profiling tool for Linux that uses hardware performance event counters to measure a number of specific kinds of events that occur during the execution of a program. Examples of events include processor clock cycles, retired instructions, data cache hits, or data cache misses. The specific events to be measured are determined by the profile configuration that is used to set up data collection. Particularly, Perf provides access to the Performance Monitoring Unit (PMU) in a CPU, and thus allows the user to have a close look at the behavior of the hardware and its associated events. The available events are processor-implementation specific. In addition, `perf` can also monitor software events through pure-kernel counters, such as context switches or minor faults, and create reports out of the data that are collected.
 
@@ -296,14 +302,9 @@ $> perf stat -e power/energy-pkg/ ls
 ```
 In this case, pkg refers to energy consumed by the CPU package during the execution of the program, typically in Joules.
 
-**Exercise 1: Plot both the speedup (Sup) of the gemm-eigen version vs. the gemm-naive version as a function of the problem size, as well as the raw package energy consumption (in Joules) of both versions as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100 and report average execution time and energy for 5 runs. Use the most appropriate perf command to minimize the number of command launches. Overall, three graph lines are requested: speedup, gemm-naive energy, and gemm-eigen energy. Consider plotting a single graph with two Y-axes (execution time and energy). Discuss briefly the obtained results.**
+**Exercise 2: Plot both the speedup (Sup) of the gemm-eigen version vs. the gemm-naive version as a function of the problem size, as well as the raw package energy consumption (in Joules) of both versions as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100 and report average execution time and energy for 5 runs. Use the most appropriate perf command to minimize the number of command launches. Overall, three graph lines are requested: speedup, gemm-naive energy, and gemm-eigen energy. Consider plotting a single graph with two Y-axes (execution time and energy). Discuss briefly the obtained results.**
 
-### Gprof
-....
-
-....
-
-### Valgrind
+### Valgrind: Is my program using memory correctly?
 ....
 
 ....
