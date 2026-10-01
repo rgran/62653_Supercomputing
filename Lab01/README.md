@@ -289,7 +289,14 @@ $> perf stat -r 5 ls
 
 In the previous example, `ls` is run 5 times and the mean count for each event, along with a ratio of std-dev/mean is printed.
 
-**Exercise 1: Plot the speedup (Sup) of the gemm-eigen version vs. the gemm-naive version as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100. Use perf to obtain the execution times. Take as execution time the average time for 5 runs (last row of the perf output). Discuss briefly the obtained results.**
+Perf can be configured not only to measure performance but also energy consumption. On Linux systems with Intel RAPL support (the case of lab000), perf stat can be used with the RAPL energy events:
+
+```
+$> perf stat -e power/energy-pkg/ ls
+```
+In this case, pkg refers to energy consumed by the CPU package during the execution of the program, typically in Joules.
+
+**Exercise 1: Plot both the speedup (Sup) of the gemm-eigen version vs. the gemm-naive version as a function of the problem size, as well as the raw package energy consumption (in Joules) of both versions as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100 and report average execution time and energy for 5 runs. Use the most appropriate perf command to minimize the number of command launches. Overall, three graph lines are requested: speedup, gemm-naive energy, and gemm-eigen energy. Consider plotting a single graph with two Y-axes (execution time and energy). Discuss briefly the obtained results.**
 
 ### Gprof
 ....
