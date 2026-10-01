@@ -229,10 +229,10 @@ $> tar -xzvf eigen-3.4.0.tar.gz
 This library is a headers-only Eigen implementation, meaning that the library compiles with the application, so just refer to the directory where the Eigen library is to be found when compiling gemm-eigen.cpp with the flag -I:
 
 ```
-$> g++ -O2 -Wall -I <path-to>/eigen-3.4.0/ gemm-eigen.cpp -o gemm-eigen
+$> g++ -O2 -pg -Wall -I <path-to>/eigen-3.4.0/ gemm-eigen.cpp -o gemm-eigen
 ```
 
-Compile as well the naive version using the flags -O2 and -Wall, but not the option -I as this version does not employ the math library.
+Compile as well the naive version using the flags -O2 (compilation optimization level), -pg (compilation with profiling instrumentation), and -Wall (enables common compiler warnings), but not the option -I as this version does not employ the math library.
 
 Try some runs for both GEMM versions. Remember that both programs expect the problem size (N) as an input parameter in the command line.
 
