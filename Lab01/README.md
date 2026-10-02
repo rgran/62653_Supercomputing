@@ -318,7 +318,7 @@ In this case, pkg refers to energy consumed by the CPU package during the execut
 
 ....
 
-**All the obtained results and discussions across exercises 1 to X should be delivered as a X-page single-column report through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format.**
+**All the obtained results and discussions across exercises 1 to 3 should be delivered as a 3-page single-column report through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format.**
 
 ## Appendix A: Shell Basics
 
