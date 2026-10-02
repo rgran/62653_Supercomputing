@@ -314,9 +314,15 @@ In this case, pkg refers to energy consumed by the CPU package during the execut
 **Exercise 2: Plot the speedup (Sup) of the gemm-eigen version vs. the gemm-naive version as a function of the problem size, as well as the raw package energy consumption (in Joules) of both versions as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100 and report average execution time and energy for 5 runs. Use the most appropriate perf command to minimize the number of command launches. Overall, three graph lines are requested: speedup, gemm-naive energy, and gemm-eigen energy. Consider plotting a single graph with two Y-axes (execution time and energy). Discuss the obtained results.**
 
 ### Valgrind: Is my program using memory correctly?
-....
 
-....
+Valgrind is a suite of tools for dynamic analysis of programs, primarily used to detect and diagnose problems related to memory management and memory accesses during program execution. Its most commonly used component, Memcheck, can detect issues such as memory leaks (dynamically allocated memory that is not properly released), invalid memory accesses (reading from or writing to memory outside an allocated region), use of uninitialized memory (using values that have not been properly initialized), or incorrect memory deallocation (e.g., mismatching new/delete and new[]/delete[]).
+
+The following command invokes Valgrind's Memcheck tool and performs a detailed analysis of the dynamically allocated memory by \<my-program\>. Specifically, the output of this command is a detailed report of detected memory leaks, including information about where the leaked memory was allocated:
+
+```
+valgrind --leak-check=full <my-program>
+```
+**Exercise 3: Run Valgrind's Memcheck for gemm-naive with N=500 and interpret the different memory leaks (direct and indirect). Then, modify the source code to address such leaks, recompile the program, rerun the same command, and verify that all the memory leaks have been fixed. Finally, run the command for gemm-eigen with N=500 and compare the results with the naive implementation. Overall, the report should contain: i) a description of the different memory leaks, including a reason about the specific number of leaked bytes and what memory allocations cause the problem, ii) the added code lines that fix the problem, and iii) a justification of the results obtained for gemm-eigen.**
 
 **All the obtained results and discussions across exercises 1 to 3 should be delivered as a 3-page single-column report through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format.**
 
