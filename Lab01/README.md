@@ -32,7 +32,7 @@
 
 Part III (and appendices) will be conducted remotely connecting through the Secure Shell protocol (ssh) to the educational server lab000.cps.unizar.es.
 
-Conneting to all the educational servers (including lab000, clinic, hendrix, pilgor, etc.) can be done using your institutional credentials (e.g., username a123456 and your administrative password). Depending on your previous experience on these servers, you may consider the following:
+Conneting to all the educational servers (including lab000, clinic, hendrix, pilgor, etc.) can be done using your institutional credentials (e.g., username a123456 and your administrative password). Consider the following depending on your previous experience on these servers:
 
 - Those who have never used any of these servers before follow this [link](https://webdiis.unizar.es/cgi-bin/hendrix-pw) to create a new account.
   
@@ -47,11 +47,11 @@ The process to connect remotely to lab000 using ssh varies depending on the loca
 ```
 $> ssh -X username@lab000.cps.unizar.es
 ```
-Symbols `$>` refer to the prompt of the Shell and should not be included in the command-line order. The option `-X` enables X11 forwarding (it allows graphical applications running on the remote machine to display their windows on your local machine).
+Symbol `$>` refers to the prompt of the Shell and should not be included in the command-line order. The option `-X` enables X11 forwarding (it allows graphical applications running on the remote machine to display their windows on your local machine).
 
 - Windows: there exist many applications to perform the ssh connection such as PuTTY+Xming, MobaXTerm, WinSCP, Termius, etc. Some of them (e.g., MobaXTerm) include a GUI interface to copy files from the local machine to the server and vice versa. For example, refer to this [document](http://webdiis.unizar.es/asignaturas/PROG1/doc/anuncios/programar_en_hendrix_desde_casa.pdf) to configure PuTTY+Xming.
 
-Finally, there are many text editors to code C/C++ programs like vi or vim to write programs directly from the Shell without the need for windows, or other windows-based editors such as gedit (already installed in the server side). Choose your preferred option to navigate and edit code, but be aware that heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
+Finally, there are many text editors to code C/C++ programs like vi or vim to write programs directly from the Shell without the need for windows, or other windows-based editors such as nano (already installed in the server side). Choose your preferred option to navigate and edit code, but be aware that heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
 
 ## Metric Definitions
 
