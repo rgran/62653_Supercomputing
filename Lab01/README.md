@@ -51,7 +51,7 @@ Symbol `$>` refers to the prompt of the Shell and should not be included in the 
 
 - Windows: there exist many applications to perform the ssh connection such as PuTTY+Xming, MobaXTerm, WinSCP, Termius, etc. Some of them (e.g., MobaXTerm) include a GUI interface to copy files from the local machine to the server and vice versa. For example, refer to this [document](http://webdiis.unizar.es/asignaturas/PROG1/doc/anuncios/programar_en_hendrix_desde_casa.pdf) to configure PuTTY+Xming.
 
-Finally, there are many text editors to code C/C++ programs like vi or vim to write programs directly from the Shell without the need for windows, or other windows-based editors such as nano (already installed in the server side). Choose your preferred option to navigate and edit code, but be aware that heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
+Finally, there are many text editors to code C/C++ programs like vi, vim, or nano to write programs directly from the Shell without the need for windows. Choose your preferred option to navigate and edit code, but be aware that other heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
 
 ## Metric Definitions
 
