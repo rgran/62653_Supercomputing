@@ -218,7 +218,7 @@ f)	EPF.
 
 ## Part III: Profiling Tools
 
-Let's take two different versions of the GEMM algorithm to learn how to use profiling tools. The src folder of the repository contains the files gemm-naive.cpp and gemm-eigen.cpp. The former code implements a naive three-nested loop (very similar to the code snippet in Part II), whereas the latter code employs the [C++ Eigen math library](https://libeigen.gitlab.io/eigen/docs-nightly/). Analyze the source codes and notice not only the difference in the programming effort but also the fact that both versions take as input the problem size (matrix dimensions) from the command line (see [Appendix A](#appendix-a-shell-basics)).
+Let's take two different versions of the GEMM algorithm to learn how to use profiling tools. The src folder of the repository contains the files gemm-naive.cpp and gemm-eigen.cpp. The former code implements a naive three-nested loop (very similar to the code snippet in Part II), whereas the latter code employs the [C++ Eigen math library](https://libeigen.gitlab.io/eigen/docs-nightly/). Analyze the three main functions in the source codes and notice not only the difference in the programming effort but also the fact that both versions take as input the problem size (matrix dimensions) from the command line (see [Appendix A](#appendix-a-shell-basics)).
 
 Transfer these two files and the Eigen 3.4.0 package version to the server lab000 using the scp command under Linux (again see [Appendix A](#appendix-a-shell-basics)) or a GUI interface under Windows. Then, unzip the Eigen library and be patient (it may take some time):
 
@@ -232,21 +232,30 @@ This library is a headers-only Eigen implementation, meaning that the library co
 $> g++ -O2 -pg -Wall -I <path-to>/eigen-3.4.0/ gemm-eigen.cpp -o gemm-eigen
 ```
 
-Compile as well the naive version using the flags -O2 (compilation optimization level), -pg (compilation with profiling instrumentation), and -Wall (enables common compiler warnings), but not the option -I as this version does not employ the math library.
+Compile as well the naive version using the flags -O2 (compilation optimization level), -pg (compilation with profiling instrumentation), and -Wall (enables common compiler warnings), but not the option -I as the naive version does not employ the math library.
 
 Try some runs for both GEMM versions. Remember that both programs expect the problem size (N) as an input parameter in the command line.
 
 The next subsections introduce different profiling tools to perform an advanced characterization of applications: Gprof, Perf, and Valgrind.
 
 ### Gprof: Where does my program spend its execution time?
-....
 
-....
+GNU Gprof is a source-level, function-oriented profiler for programs compiled with GCC/G++. It provides information about how the execution time of a program is distributed among its functions and how functions call each other. In other words, Gprof provides a high-level characterization of the program based on its function structure. It identifies which parts of the application dominate execution time, particularly when the program has relatively simple function boundaries, helping us locate potential computational bottlenecks before investigating the underlying hardware behavior.
 
+How Gprof works? First, the program should be compiled with profiling instrumentation. That is, adding the flag -pg as mentioned above. Second, a profiling data file (gmon.out) is generated after running the program. Finally, gmon.out can be analyzed with:
 
-### Perf: How efficiently is the CPU executing it?
+```
+$> gprof <my-program> gmon.out
+```
+Where \<my-program\> is the binary file after compiling the program.
 
-Perf is an event-based, command-line profiling tool for Linux that uses hardware performance event counters to measure a number of specific kinds of events that occur during the execution of a program. Examples of events include processor clock cycles, retired instructions, data cache hits, or data cache misses. The specific events to be measured are determined by the profile configuration that is used to set up data collection. Particularly, Perf provides access to the Performance Monitoring Unit (PMU) in a CPU, and thus allows the user to have a close look at the behavior of the hardware and its associated events. The available events are processor-implementation specific. In addition, `perf` can also monitor software events through pure-kernel counters, such as context switches or minor faults, and create reports out of the data that are collected.
+The output basically shows the time spent in every function, the number of calls to every function, and the function call tree of the program.
+
+**Exercise 1: Profile both gemm-naive and gemm-eigen programs using Gprof. Make sure the problem size (N) is large enough (e.g., N=500) that gemm() runs for a reasonably long time. Otherwise, the sampling-based timing information can be too coarse to produce an informative profile. Particularly, report the relative time spent in every function over the total execution time in the case of gemm-naive and discuss the obtained results. In the case of gemm-eigen, discuss why the output is so difficult to interpret.**
+
+### Perf: How efficiently is the hardware executing the program?
+
+Perf is an event-based, command-line profiling tool for Linux that uses hardware performance event counters to measure a number of specific kinds of events that occur during the execution of a program. Examples of events include processor clock cycles, retired instructions, data cache hits, or data cache misses. The specific events to be measured are determined by the profile configuration that is used to set up data collection. Particularly, Perf provides access to the Performance Monitoring Unit (PMU) in a CPU, and thus allows the user to have a close look at the behavior of the hardware and its associated events. The available events are processor-implementation specific. In addition, Perf can also monitor software events through pure-kernel counters, such as context switches or minor faults, and create reports out of the data that are collected.
 
 To obtain a full list of the supported events, type:
 
@@ -302,7 +311,7 @@ $> perf stat -e power/energy-pkg/ ls
 ```
 In this case, pkg refers to energy consumed by the CPU package during the execution of the program, typically in Joules.
 
-**Exercise 2: Plot both the speedup (Sup) of the gemm-eigen version vs. the gemm-naive version as a function of the problem size, as well as the raw package energy consumption (in Joules) of both versions as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100 and report average execution time and energy for 5 runs. Use the most appropriate perf command to minimize the number of command launches. Overall, three graph lines are requested: speedup, gemm-naive energy, and gemm-eigen energy. Consider plotting a single graph with two Y-axes (execution time and energy). Discuss briefly the obtained results.**
+**Exercise 2: Plot the speedup (Sup) of the gemm-eigen version vs. the gemm-naive version as a function of the problem size, as well as the raw package energy consumption (in Joules) of both versions as a function of the problem size. Specifically, vary N from 100 to 1000 in steps of 100 and report average execution time and energy for 5 runs. Use the most appropriate perf command to minimize the number of command launches. Overall, three graph lines are requested: speedup, gemm-naive energy, and gemm-eigen energy. Consider plotting a single graph with two Y-axes (execution time and energy). Discuss the obtained results.**
 
 ### Valgrind: Is my program using memory correctly?
 ....
