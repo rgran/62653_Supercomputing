@@ -2,6 +2,8 @@
 
 ## Goals of the Lab Session
 
+In supercomputing systems, measuring system metrics and characterizing program behavior are essential for understanding, evaluating, and optimizing computational performance. These are the main goals of the lab:
+
 - Set up the working environment.
 
 - Learn basic system metrics.
@@ -54,6 +56,10 @@ Symbol `$>` refers to the prompt of the Shell and should not be included in the 
 Finally, there are many text editors to code C/C++ programs like vi, vim, or nano to write programs directly from the Shell without the need for windows. Choose your preferred option to navigate and edit code, but be aware that other heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
 
 ## Metric Definitions
+
+System metrics help quantify how efficiently computing resources are being used. Program characterization (see the next section) complements these measurements by identifying computational bottlenecks, memory-management issues, and hardware-related inefficiencies.
+
+Together, these analyses enable researchers and system administrators to compare architectures, evaluate optimization techniques, improve resource utilization, and reduce energy consumption. Accurate and reproducible measurements are also crucial for reporting results, validating performance claims, and ensuring fair comparisons between different implementations and computing systems. The following is a list of key system metrics:
 
 - Execution time ($$T_{exec}$$): the time required by a computer to execute a given program or workload, from start to completion.
 
