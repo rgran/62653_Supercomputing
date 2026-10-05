@@ -157,7 +157,7 @@ For example, Sup = 2 means the optimized version is 2× faster (takes half the t
 
 ## Part II: Written Exercise
 
-**The following exercise should be delivered through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. Scanned handwritten files are accepted.**
+**The following exercise should be delivered through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. Scanned handwritten files are accepted. This exercise must be completed and submitted individually.**
 
 General Matrix Multiply (GEMM) is a common algorithm in linear algebra, machine learning, statistics, and many other domains. A possible high-level source code for GEMM is as follows:
 
@@ -324,7 +324,7 @@ valgrind --leak-check=full <my-program>
 ```
 **Exercise 3: Run Valgrind's Memcheck for gemm-naive with N=500 and interpret the different memory leaks (direct and indirect). Then, modify the source code to address such leaks, recompile the program, rerun the same command, and verify that all the memory leaks have been fixed. Finally, run the command for gemm-eigen with N=500 and compare the results with the naive implementation. Overall, the report should contain: i) a description of the different memory leaks, including a reason about the specific number of leaked bytes and what memory allocations cause the problem, ii) the added code lines that fix the problem, and iii) a justification of the results obtained for gemm-eigen.**
 
-**All the obtained results and discussions across exercises 1 to 3 should be delivered as a 3-page single-column report through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format.**
+**All the obtained results and discussions across exercises 1 to 3 should be delivered as a 3-page single-column report through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. These exercises are encouraged to be completed and submitted in couples.**
 
 ## Appendix A: Shell Basics
 
