@@ -55,7 +55,7 @@ Symbol `$>` refers to the prompt of the Shell and should not be included in the 
 
 Finally, there are many text editors to code C/C++ programs like vi, vim, or nano to write programs directly from the Shell without the need for windows. Choose your preferred option to navigate and edit code, but be aware that other heavy-weighted editors (e.g., VSCodium) may consume all your disk quota in the server.
 
-## Metric Definitions
+## Part I: Metric Definitions
 
 System metrics help quantify how efficiently computing resources are being used. Program characterization (see the next section) complements these measurements by identifying computational bottlenecks, memory-management issues, and hardware-related inefficiencies.
 
