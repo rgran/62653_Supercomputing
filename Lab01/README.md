@@ -330,7 +330,7 @@ valgrind --leak-check=full <my-program>
 ```
 **Exercise 3: Run Valgrind's Memcheck for gemm-naive with N=500 and interpret the different memory leaks (direct and indirect). Then, modify the source code to address such leaks, recompile the program, rerun the same command, and verify that all the memory leaks have been fixed. Finally, run the command for gemm-eigen with N=500 and compare the results with the naive implementation. Overall, the report should contain: i) a description of the different memory leaks, including a reason about the specific number of leaked bytes and what memory allocations cause the problem, ii) the added code lines that fix the problem, and iii) a justification of the results obtained for gemm-eigen.**
 
-**All the obtained results and discussions across exercises 1 to 3 should be delivered as a 3-page single-column report through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. These exercises are encouraged to be completed and submitted in couples. Just a member of the couple submits the report through Moodle (both names must appear in the report).**
+**All the obtained results and discussions across exercises 1 to 3 should be delivered as a 3-page single-column report through the corresponding Moodle resource before the stated deadline. The uploaded file should be in PDF format. These exercises are encouraged to be completed and submitted in couples. Just a member of the couple submits the report through Moodle (both names and university ids -NIAs- must appear in the report).**
 
 ## Appendix A: Shell Basics
 
