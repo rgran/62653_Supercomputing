@@ -57,7 +57,7 @@ Finally, there are many text editors to code C/C++ programs like vi, vim, or nan
 
 ## Part I: Metric Definitions
 
-System metrics help quantify how efficiently computing resources are being used. Program characterization (see the next section) complements these measurements by identifying computational bottlenecks, memory-management issues, and hardware-related inefficiencies.
+System metrics help quantify how efficiently computing resources are being used. Program characterization (see Part III) complements these measurements by identifying computational bottlenecks, memory-management issues, and hardware-related inefficiencies.
 
 Together, these analyses enable researchers and system administrators to compare architectures, evaluate optimization techniques, improve resource utilization, and reduce energy consumption. Accurate and reproducible measurements are also crucial for reporting results, validating performance claims, and ensuring fair comparisons between different implementations and computing systems. The following is a list of key system metrics:
 
