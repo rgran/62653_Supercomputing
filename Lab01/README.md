@@ -97,7 +97,7 @@ $$
 \text{IPS} = \frac{\text{IC}}{T_{Exec}} = \frac{\text{Clock rate}}{\text{CPI}} 
 $$  
 
-- Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s. The precise definition depends on the system and workload. In this course, we will assume the following equation, where OC is the Operand Count measured as the number of memory (load and store) instructions of a program, considering that a given memory instruction transferres a single operand.
+- Data bandwidth (dBW): the rate at which data are transferred or processed, typically measured in bytes/s. The precise definition depends on the system and workload. In this course, we will assume the following equation, where **OC is the Operand Count measured as the number of memory (load and store) instructions of a program, considering that a given memory instruction transferres a single operand of structured data (e.g., arrays or matrices)**.
 
 $$
 \text{dBW} = \frac{\text{OC} \times \frac{\text{bytes}}{\text{operand}}}{T_{Exec}}
