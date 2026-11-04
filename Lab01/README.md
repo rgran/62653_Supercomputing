@@ -232,7 +232,7 @@ Transfer these two files and the Eigen 3.4.0 package version to the server lab00
 $> tar -xzvf eigen-3.4.0.tar.gz
 ```
 
-This library is a headers-only Eigen implementation, meaning that the library compiles with the application, so just refer to the directory where the Eigen library is to be found when compiling gemm-eigen.cpp with the flag -I:
+This library is a headers-only Eigen implementation, meaning that the library compiles with the application, so just refer to the directory where the Eigen library is to be found (e.g., \<path-to\>=/home/username/supercomputing/lab01/) when compiling gemm-eigen.cpp with the flag -I:
 
 ```
 $> g++ -O2 -pg -Wall -I <path-to>/eigen-3.4.0/ gemm-eigen.cpp -o gemm-eigen
@@ -253,11 +253,11 @@ How Gprof works? First, the program should be compiled with profiling instrument
 ```
 $> gprof <my-program> gmon.out
 ```
-Where \<my-program\> is the binary file after compiling the program.
+Where \<my-program\> is the binary file generated after compiling the program.
 
 The output basically shows the time spent in every function, the number of calls to every function, and the function call tree of the program.
 
-**Exercise 1: Profile both gemm-naive and gemm-eigen programs using Gprof. Make sure the problem size (N) is large enough (e.g., N=500) that gemm() runs for a reasonably long time. Otherwise, the sampling-based timing information can be too coarse to produce an informative profile. Particularly, report the relative time spent in every function over the total execution time in the case of gemm-naive and discuss the obtained results. In the case of gemm-eigen, discuss why the output is so difficult to interpret.**
+**Exercise 1: Profile both gemm-naive and gemm-eigen programs using Gprof. Make sure the problem size (N) is large enough (e.g., N=500) so that gemm() runs for a reasonably long time. Otherwise, the sampling-based timing information can be too coarse to produce an informative profile. Particularly, report the relative time spent in every function over the total execution time in the case of gemm-naive and discuss the obtained results. In the case of gemm-eigen, discuss why the output is so difficult to interpret.**
 
 ### Perf: How efficiently is the hardware executing the program?
 
