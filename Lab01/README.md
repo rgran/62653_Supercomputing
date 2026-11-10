@@ -204,7 +204,7 @@ BB stands for Basic Block of instructions. The following table summarizes the to
 | BB5    |  1        | 0         |
 | BB6    |  1        | 0         |
 | BB7    |  1        | 0         |
-| BB8    |  7        | 3         |
+| BB8    |  7        | 2         |
 | BB9    |  4        | 1         |
 | BB10   |  2        | 0         |
 
