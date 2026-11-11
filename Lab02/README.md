@@ -14,8 +14,6 @@ link on the course website (moodle). Include your NIP in the file name
 (`vector_NIP.pdf`). The document must contain the full names of the authors
 in its header and must not exceed 4 pages.
 
-**Submission deadline:** XXXX, XXhXXm.
-
 ## Part 1. Automatic vectorization
 
 1. How many instructions are executed in the inner loop (`esc.sse`,
