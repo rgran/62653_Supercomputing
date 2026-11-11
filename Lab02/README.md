@@ -1,7 +1,5 @@
 # Fundamentals of Vectorization on AMD64
 
-*Agustín Navarro Torres*
-
 > The assessment consists of several questions related to the lab handout.
 > Times and metrics must be obtained from runs on a DIIS machine that you
 > must specify (L0.03, L0.04, L0.06, L1.02, lab000…). Be concise in your
